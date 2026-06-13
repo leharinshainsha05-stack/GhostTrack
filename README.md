@@ -6,6 +6,18 @@ Indian trucks have large blind spots on both sides, causing accidents involving
 pedestrians, cyclists, and two-wheelers. GhostTrack uses AI and radar to detect 
 vulnerable road users in these blind zones and alert the driver in real time.
 
+## How It Works
+1. **Cameras** mounted on left and right blind zones capture live video feed
+2. **YOLOv8 model** processes each frame to detect persons, cyclists, 
+   auto-rickshaws, and e-rickshaws
+3. **mmWave Radar** measures the exact distance of detected objects
+4. **ESP32** fuses radar and camera data and sends alerts via UART to Raspberry Pi 5
+5. **Alert System** classifies threats as:
+   - 🔴 CRITICAL — object very close, immediate danger
+   - 🟡 AWARENESS — object detected, driver should be cautious
+   - 🟢 SAFE — no threat detected
+6. **Driver gets alerted** in real time to avoid accidents
+
 ## Team
 - Leharin (B.Tech CSE, AEMT University, Chennai)
 - Rajamaran (B.Tech SE, AEMT University, Chennai)
