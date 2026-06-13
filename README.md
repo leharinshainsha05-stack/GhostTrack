@@ -13,8 +13,8 @@ vulnerable road users in these blind zones and alert the driver in real time.
 3. **mmWave Radar** measures the exact distance of detected objects
 4. **ESP32** fuses radar and camera data and sends alerts via UART to Raspberry Pi 5
 5. **Alert System** classifies threats as:
-   - 🔴 CRITICAL — object very close, immediate danger
-   - 🟡 AWARENESS — object detected, driver should be cautious
+   - 🔴 CRITICAL — object very close, immediate danger -> (output- RED light on A-pillar & heavy haptic in steering)
+   - 🟡 AWARENESS — object detected, driver should be cautious -> (output- YELLOW light on A-pillar & low haptic in steering)
    - 🟢 SAFE — no threat detected
 6. **Driver gets alerted** in real time to avoid accidents
 
